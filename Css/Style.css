@@ -6,6 +6,13 @@
 }
 
 @font-face {
+    font-family: "NaN Metrify B Medium";
+    src: url("../Assets/Fonts/NaNMetrify-B-Latin/NaNMetrifyBStd-MedReal.woff") format("woff2");
+    font-weight: 100 900; 
+    font-style: normal;
+}
+
+@font-face {
     font-family: "NaN Metrify B Gigawide";
     src: url("../Assets/Fonts/NaNMetrifyBGigawide-Med.woff2") format("woff");
     font-weight: 900; 
@@ -154,6 +161,7 @@ a.project h3 {
 }
 
 a.project h4 {
+    font-family: "NaN Metrify B Medium";
     font-weight: 300;
     font-size: 1.1rem;
     width: 50vw;
