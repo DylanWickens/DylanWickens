@@ -66,7 +66,7 @@ body {
     cursor: none;
     background-color: var(--black);;
     color: var(--blue) ;
-    font-family: "NaN Metrify B Standard", Arial, Helvetica, sans-serif;
+    font-family: "NaN-Std-Medium", Arial, Helvetica, sans-serif;
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 700;
