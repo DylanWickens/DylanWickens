@@ -1,0 +1,225 @@
+@font-face {
+    font-family: "NaN Metrify B Standard";
+    src: url("../Assets/Fonts/00.VF/NaNMetrifyB-VF.woff2") format("woff2"),
+         url("../Assets/Fonts/00.VF/NaNMetrifyB-VF.woff") format("woff"),
+         url("../Assets/Fonts/00.VF/NaNMetrifyB-VF.ttf") format("truetype");
+    font-weight: 100 900; 
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "NaN Metrify B Gigawide";
+    src: url("../Assets/Fonts/00.VF/NaNMetrifyBGigawide-Blck.woff") format("woff");
+    font-weight: 900; 
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "IBM Plex Mono";
+    src: url("../Assets/Fonts/IBM/IBMPlexMono-Regular.ttf") format("truetype"),
+         url("../Assets/Fonts/IBM/IBMPlexMono-Medium.ttf") format("truetype");
+    font-weight: 400 500; 
+    font-style: normal;
+}
+
+
+html {
+    font-size: 16px;
+}
+
+
+body {
+    background-color: #DADEF1;;
+    color: #2D78F2;
+    font-family: "NaN Metrify B Standard";
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.03rem;
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+}
+
+h1.wasson {
+    margin-top: 54rem;
+    margin-left:  3.9375rem;
+    color: #2D78F2;
+    font-family: "NaN Metrify B Gigawide";
+    font-size: 9rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.502625rem;
+}
+
+header {
+    z-index: 1000;
+    position: fixed;
+    top: 1.6875rem;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 7.875rem); /* Adjusted to match footer */
+    margin-left: 3.9375rem; /* Shared left margin with footer */
+    margin-right: 3.9375rem; /* Shared right margin with footer */
+}
+
+header div p {
+    width: 29.190375rem;
+    line-height: 1.2;
+}
+
+header div {
+    display: flex;
+    justify-content: space-between;
+    width: 43.75rem;
+}
+
+header a {
+    color: #2D78F2;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.01125rem;
+    text-decoration: none;
+    margin-left: 0.6900rem;
+    height: min-content;
+    padding-bottom: 2px;
+}
+
+header a:hover {
+    border-bottom: 2px #2D78F2 solid;
+}
+
+footer {
+    margin-top: 40rem;
+    padding-bottom: 30rem;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: top;
+    margin-left:  3.9375rem;
+    margin-right: 3.9375rem;
+    color: #2D78F2;
+}
+
+footer .left {
+    transform: translateX(14.5625rem);
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    text-align: left; 
+}
+
+footer .right {
+    transform: translateX(-16.0625rem);
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    text-align: left;
+}
+
+footer a {
+    color: #2D78F2;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: -0.01125rem;
+    text-decoration: none;
+    width: min-content;
+    padding-bottom: 2px;
+}
+
+footer a:hover {
+    border-bottom: 2px #2D78F2 solid;
+}
+
+
+/* Portfolio */
+/* Portfolio Section */
+
+/* Align and style the main container */
+.project {
+    position: relative;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    overflow: hidden; /* Prevent overflow */
+    width: 100vw; /* Full viewport width */
+    padding: 150px, 0, 150px, 0;
+  }
+  
+  /* Container for text and video */
+  .h-fitty-container {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    overflow: hidden; /* Prevent overflow */
+    height: 100vh;
+    width: 100vw;
+    margin: 0, 200px ,0 200px;;
+  }
+  
+  /* Vimeo iframe for video background */
+  .h-fitty-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Stretch to fill the container */
+    height: 100%; /* Stretch to fill the container */
+    z-index: 0; /* Place behind the text */
+    pointer-events: none; /* Prevent interaction with the iframe */
+    border: none; /* Remove border */
+  }
+  
+  /* Style the text */
+  .h-fitty {
+    position: relative;
+    z-index: 1; /* Place above the video */
+    text-align: center;
+    color: white; /* Ensure the text is visible on the video */
+    font-size: 2rem; /* Initial size before Fitty modifies */
+    pointer-events: none; /* Prevent interaction */
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+
+
+@media (min-width: 1600px) and (max-width: 2260px) {
+    h1.wasson {
+        font-size: 9rem; /* medium screens */
+     
+    }
+}
+
+@media (min-width: 2260px){
+    html {
+        font-size: 18px;
+    }
+
+    h1.wasson {
+        font-size: 9rem; /* 1440p screens */
+        margin-top: 87vh;
+    }
+}
+
+@media (min-width: 3440px) {
+    html {
+        font-size: 22px;
+    }
+
+    h1.wasson {
+        font-size: 12rem; /* 4k screens */
+        margin-top: 83vh;
+    }
+
+
+    .desc {
+        width:800px
+    }
+
+
+}
