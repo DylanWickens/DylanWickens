@@ -1,8 +1,6 @@
 @font-face {
     font-family: "NaN Metrify B Standard";
-    src: url("../Assets/Fonts/NaNMetrify-B-Latin/00.VF/NaNMetrifyB-VF.woff2") format("woff2"),
-         url("../Assets/Fonts/NaNMetrify-B-Latin/00.VF/NaNMetrifyB-VF.woff") format("woff"),
-         url("../Assets/Fonts/NaNMetrify-B-Latin/00.VF/NaNMetrifyB-VF.ttf"), format("truetype");
+    src: url("../Assets/Fonts/NaNMetrify-B-Latin/NaNMetrifyBStd-Med.woff2") format("woff2");
     font-weight: 100 900; 
     font-style: normal;
 }
@@ -36,7 +34,7 @@ html {
 body {
     background-color: var(--black);;
     color: var(--blue) ;
-    font-family: "NaN Metrify B Standard";
+    font-family: "NaN Metrify B Standard", Arial, Helvetica, sans-serif;
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 700;
@@ -479,6 +477,7 @@ header nav a {
         overflow: hidden;
         font-family: "NaN Metrify B Standard";
         font-weight: 600;
+        font-style: normal;
     }
     
     body.hello {
@@ -488,7 +487,7 @@ header nav a {
         font-family: "NaN Metrify B Standard";
         font-weight: 600;
 
-        
+        font-style: normal;
     }
     
     header nav {
@@ -524,6 +523,8 @@ header nav a {
         font-size: 1.1rem;
         width: fit-content;
         margin-right: 15px;
+
+        font-style: normal;
     }
 
     #hide {
@@ -532,7 +533,7 @@ header nav a {
 
     #hideMain {
     display: block;
-
+   font-style: normal;
 
     margin: 40vh 10px 0px 10px;
     width: calc(100% - 20px);
