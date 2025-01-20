@@ -304,6 +304,7 @@ a.next_btn {
     border: #F1F1F1 solid 3px;
     border-radius: 2px;
     width: 10rem;
+    margin-bottom: 4rem;
 }
 
 a.next_btn:hover {
