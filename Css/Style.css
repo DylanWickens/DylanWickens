@@ -80,6 +80,7 @@ body.hello {
     min-height: 100vh; 
     display: flex;
     flex-direction: column; 
+    justify-content: space-between;
 }
 
 #hideMain{
@@ -87,15 +88,18 @@ body.hello {
 }
 
 h1.wasson {
-    margin-top: 54rem;
-    margin-left:  3.9375rem;
-    color: var(--blue) ;
+    position: absolute; /* Allows precise positioning */
+    bottom: 0; /* Anchors the element to the bottom of the page */
+    left: 3.9375rem; /* Same as your margin-left */
+    color: var(--blue);
     font-family: "NaN Metrify B Gigawide";
     font-size: 9rem;
     font-style: normal;
     font-weight: 500;
     line-height: 1.1;
     letter-spacing: -0.502625rem;
+    margin: 0; /* Reset margins for precision */
+    transform: translateY( -7.5%); /* Prevents potential cutoff from translations */
 }
 
 header {
@@ -255,8 +259,8 @@ div.small_tiles {
 footer {
     background-color: var(--blue);
     color: var(--white);
- 
-    margin-top: 5rem;
+    margin-top: auto;
+    margin-bottom: -150px;
     padding: 2.12rem 0;
 }
 
