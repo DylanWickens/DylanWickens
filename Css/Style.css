@@ -389,9 +389,9 @@ a.next_btn p {
         margin-right: 1.1rem; 
     }
 
-    footer {
-        margin-top:2rem;
-    }
+    /* footer {
+        margin-top:auto;
+    } */
 }
 
 @media (max-width: 1450px) {
