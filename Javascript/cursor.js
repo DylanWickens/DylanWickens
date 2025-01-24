@@ -1,47 +1,66 @@
-// Select the single cursor element
 const cursor = document.querySelector(".cursor");
-
-// Select the last image container
 const lastImage = document.querySelector(".last-image");
 
-// Select the hidden <a> tag
-const hiddenLink = document.getElementById("hiddenLink");
+// Array of project links
+const projectLinks = ["TheModernMuseum.html", "EmergentX.html", "Regenerate.html"];
 
-// Track mouse movement to update cursor position
-window.addEventListener("mousemove", (e) => {
-  const x = e.pageX;
-  const y = e.pageY;
+// Retrieve current project index from localStorage or default to 0
+let currentProjectIndex = parseInt(localStorage.getItem("currentProjectIndex")) || 0;
 
-  // Update the position of the single cursor
-  cursor.style.left = `${x}px`;
-  cursor.style.top = `${y}px`;
-});
+if (!cursor || !lastImage) {
+  console.error("Cursor or last image element not found!");
+} else {
+  let isPastLastImage = false;
 
-// Handle the scroll event to check the position of the last image
-function handleScroll() {
-  const lastImageRect = lastImage.getBoundingClientRect();
-  const windowHeight = window.innerHeight;
+  function handleScroll() {
+    const lastImageRect = lastImage.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
 
-  // Check if the last image is above the viewport
-  if (lastImageRect.bottom < windowHeight) {
-    cursor.classList.add("hover-next"); // Add hover-next class
-    cursor.textContent = "Next"; // Add "Next" text
-  } else {
-    cursor.classList.remove("hover-next"); // Remove hover-next class
-    cursor.textContent = ""; // Ensure text is cleared when above last image
+    // Update the state if the last image is scrolled past
+    isPastLastImage = lastImageRect.bottom < windowHeight;
+
+    cursor.classList.toggle("hover-next", isPastLastImage);
+    cursor.textContent = isPastLastImage ? "Next" : "";
   }
+
+  window.addEventListener("scroll", () => {
+    requestAnimationFrame(handleScroll);
+  });
+
+  let rafId;
+  window.addEventListener("mousemove", (e) => {
+    if (rafId) cancelAnimationFrame(rafId);
+    rafId = requestAnimationFrame(() => {
+      cursor.style.left = `${e.pageX}px`;
+      cursor.style.top = `${e.pageY}px`;
+    });
+  });
+
+  window.addEventListener("click", () => {
+    if (isPastLastImage) {
+      const projectLink = projectLinks[currentProjectIndex];
+      const currentPage = window.location.pathname.split("/").pop(); // Get the active page name
+
+      console.log(`Current page: ${currentPage}`);
+      console.log(`Target project link: ${projectLink}`);
+      console.log(`Before update: currentProjectIndex = ${currentProjectIndex}`);
+
+      // Navigate to the current project link
+      if (projectLink !== currentPage) {
+        console.log(`Navigating to ${projectLink}`);
+        window.location.href = projectLink;
+      }
+
+      // Update the index to the next project
+      currentProjectIndex = (currentProjectIndex + 1) % projectLinks.length;
+      console.log(`After update: currentProjectIndex = ${currentProjectIndex}`);
+
+      // Save the updated index to localStorage
+      localStorage.setItem("currentProjectIndex", currentProjectIndex);
+    } else {
+      console.log("No navigation triggered.");
+    }
+  });
+
+  cursor.style.opacity = 1;
 }
-
-// Attach the scroll event listener
-window.addEventListener("scroll", handleScroll);
-
-// Trigger the hidden <a> tag when the cursor is clicked in hover-next state
-cursor.addEventListener("click", () => {
-  if (cursor.classList.contains("hover-next")) {
-    console.log("Navigating to emergentx.html via hidden <a> tag");
-    hiddenLink.click(); // Simulate a click on the hidden <a> tag
-  }
-});
-
-// Ensure the cursor is visible on page load
-cursor.style.opacity = 1; // Ensure cursor is visible by default

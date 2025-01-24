@@ -47,6 +47,22 @@
     background-color: var(--white); /* Visible default background */
     opacity: 1; /* Ensure the cursor is visible */
   }
+
+  .cursor.blue {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: transform 750ms ease-out, height 250ms ease-out, width 250ms ease-out, opacity 250ms ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    background-color: var(--blue); /* Visible default background */
+    opacity: 1; /* Ensure the cursor is visible */
+  }
   
   .cursor.hover-next {
     height: 100px;
