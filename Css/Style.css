@@ -789,15 +789,12 @@ div.small_tiles img {
     margin-top: 1rem; /* Remove the top margin */
 }
 
-
-
 div.btn_wrapper {
     margin: 0 auto; 
     margin-top: 4rem;
     transform: translate( 0, 0) ;
     display: flex;
     justify-content: center; 
-    
 }
 
 a.next_btn {
