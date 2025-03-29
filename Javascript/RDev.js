@@ -22,7 +22,7 @@ function setup() {
 
     graphic.textSize(textSizeValue);
     graphic.textAlign(CENTER, CENTER);
-    graphic.fill("#2D78F2");
+    graphic.fill("#0000ff");
     graphic.textFont(NanMetrify);
     graphic.textStyle(100);
 
