@@ -1,6 +1,6 @@
 @font-face {
   font-family: Metrify ;
-  src: url(./Fonts/NaNMetrifyB-VF.woff);
+  src: url("Fonts/NaNMetrifyB-VF.woff");
 }
 
 body {
