@@ -360,6 +360,9 @@ a.next_btn p {
     html {
         font-size: 18px;
     }
+    .details p {
+        width: calc(30% -  0.625rem);
+    }
 
     h1.wasson {
         font-size: 9rem; /* 1440p screens */
@@ -383,6 +386,7 @@ a.next_btn p {
     .desc {
         width:800px
     }
+  
 }
 
 
