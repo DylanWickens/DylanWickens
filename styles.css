@@ -216,9 +216,6 @@ nav {
   padding-bottom: 2px;
   border-bottom: #00f solid 2px;
 }
-.prev-next p {
-  margin-right: 1rem;
-}
 }
 
 @media (max-width: 1024px) {
@@ -353,7 +350,7 @@ nav {
     }
 }
 
-@media (min-width: 1800px) {
+@media (min-width: 1660px) {
   .desc {
     width: 58%;
     font-size: 1.25rem;
@@ -390,4 +387,10 @@ nav {
 .prev-next {
   font-size: 1.6rem;
 }
+}
+
+@media (min-width: 1280px) and (max-width: 1440px) {
+  .desc {
+    width: 66%;
+  }
 }
