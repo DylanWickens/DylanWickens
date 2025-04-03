@@ -462,12 +462,26 @@ nav {
 }
 
 .vimeo-wrapper--first {
-  padding-top: 56.25%;
-  position: relative;
   width: 100%;
   border-radius: 0.75rem;
   overflow: hidden;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+.vimeo-wrapper--first .vimeo-aspect {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.vimeo-wrapper--first iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover;
 }
 
 @media (max-width: 1024px) {
@@ -492,16 +506,6 @@ nav {
   .vimeo-wrapper--first {
     margin-bottom: 3rem;
   }
-}
-
-.vimeo-wrapper--first iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-  object-fit: cover;
 }
 
 @media (max-width: 1024px) {
