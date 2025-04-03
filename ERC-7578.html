@@ -4,7 +4,7 @@
   <title>Dylan Wickens</title>
   <link rel="stylesheet" href="reset.css" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="./Images/Favicon.png" type="image/png">
+  <link rel="icon" href="./Images/Favicon.png" type="image/png" />
 </head>
 
 <body>
@@ -25,9 +25,17 @@
     </div>
 
     <div class="gallery">
-      <video class="autoplay-video" loading="lazy" autoplay data-muted playsinline loop controls poster="Images/Desat/ERC-7578Poster.png">
-        <source src="/Videos/Desat/EX_ERC-7578-Test.webm" />
-      </video>
+      <div class="vimeo-wrapper--first">
+        <iframe
+          src="https://player.vimeo.com/video/1072304455?h=5d9fb659cf&amp;title=0&amp;byline=0&amp;portrait=0&autoplay=1&loop=1"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+          allowfullscreen
+          loading="lazy"
+          title="ERC-7578 Motion"
+        ></iframe>
+      </div>
+
       <div class="tap-for-audio">Tap Video for Audio</div>
 
       <div class="desc">
@@ -45,19 +53,49 @@
         </h4>
       </div>
 
-      <video class="autoplay-video" loading="lazy" loop controls poster="Images/Desat/Watch Poster.png">
-        <source src="/Videos/Desat/EX_ERC-7578_Watch.webm" />
-      </video>
+      <div class="vimeo-wrapper">
+        <div style="padding: 56.25% 0 0 0; position: relative">
+          <iframe
+            src="https://player.vimeo.com/video/1072304428?h=e94c011f19&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&loop=1"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            "
+            title="EX_ERC-7578_Watch"
+          ></iframe>
+        </div>
+
+      </div>
 
       <img
-      loading="lazy"
-      src="Images/Desat/Instagram Still.png"
-      alt="Instagram Styleframes"
-    />
+        loading="lazy"
+        src="Images/Desat/Instagram Still.png"
+        alt="Instagram Styleframes"
+      />
 
-      <video class="autoplay-video" loading="lazy" controls loop poster="Images/Desat/Example Poster.png">
-        <source src="/Videos/Desat/Example.webm" />
-      </video>
+      <div class="vimeo-wrapper">
+        <div style="padding: 56.25% 0 0 0; position: relative;">
+          <iframe
+            src="https://player.vimeo.com/video/1072304493?h=37b139826f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&loop=1"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            "
+            title="ERC-7578 Car Test"
+          ></iframe>
+        </div>
+
+      </div>
 
       <div class="prev-next">
         <a href="bosena.html" class="prev">← Previous</a>
@@ -65,6 +103,6 @@
       </div>
     </div>
   </div>
+  <script src="https://player.vimeo.com/api/player.js"></script>
   <script src="/scripts.js"></script>
-  
 </body>

@@ -4,7 +4,7 @@
   <title>Dylan Wickens</title>
   <link rel="stylesheet" href="reset.css" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="./Images/Favicon.png" type="image/png">
+  <link rel="icon" href="./Images/Favicon.png" type="image/png" />
 </head>
 
 <body>
@@ -16,8 +16,12 @@
 
     <div class="contact">
       <a href="mailto:dylan@wickens.design" target="_blank">Email me</a>
-      <a href="https://www.instagram.com/dylanwickens_/" target="_blank">Instagram</a>
-      <a href="https://www.linkedin.com/in/dylanwickens/" target="_blank">LinkedIn</a>
+      <a href="https://www.instagram.com/dylanwickens_/" target="_blank"
+        >Instagram</a
+      >
+      <a href="https://www.linkedin.com/in/dylanwickens/" target="_blank"
+        >LinkedIn</a
+      >
     </div>
 
     <div class="gallery">
@@ -50,11 +54,23 @@
         "
         alt="Bosena logo"
       />
-
-      <video loading="lazy" autoplay muted loop poster="Images/Bosena/Logo poster.png">
-        <source src="/Videos/BosenaMotion.webm" />
-      </video>
-
+      <div class="vimeo-wrapper--first">
+        <div style="padding: 56.25% 0 0 0; position: relative">
+          <iframe
+            src="https://player.vimeo.com/video/1072304549?h=fb6c3d6333&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=584799&autoplay=1&loop=1&controls=0"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            "
+            title="BosenaMotion"
+          ></iframe>
+        </div>
+      </div>
       <img
         loading="lazy"
         src="Images/Bosena/paperposter@1x.png"
@@ -75,9 +91,23 @@
         alt="Bosena logo"
       />
 
-      <video loading="lazy" autoplay muted loop poster="Images/Bosena/Website Poster.png">
-        <source src="/Videos/BosenaWebsite.webm" />
-      </video>
+      <div class="vimeo-wrapper">
+        <div style="padding: 56.27% 0 0 0; position: relative">
+          <iframe
+            src="https://player.vimeo.com/video/1072304566?h=c0ae74b6ab&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1&loop=1&controls=0"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            "
+            title="BosenaWebsite"
+          ></iframe>
+        </div>
+      </div>
 
       <img
         loading="lazy"
@@ -112,16 +142,19 @@
       <img
         loading="lazy"
         src="Images/Bosena/bench@1x.png"
-        srcset="Images/Bosena/bench@1x.png 1x, Images/Bosena/bench@3xresized.jpg 2x"
+        srcset="
+          Images/Bosena/bench@1x.png        1x,
+          Images/Bosena/bench@3xresized.jpg 2x
+        "
         alt="Bosena logo"
       />
 
-     
       <div class="prev-next">
         <a href="ERC-7578.html" class="prev">← Previous</a>
         <a href="ERC-7578.html" class="next">Next →</a>
       </div>
     </div>
   </div>
+  <script src="https://player.vimeo.com/api/player.js"></script>
   <script src="scripts.js"></script>
 </body>

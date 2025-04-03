@@ -4,7 +4,7 @@
   <title>Dylan Wickens</title>
   <link rel="stylesheet" href="reset.css" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="./Images/Favicon.png" type="image/png">
+  <link rel="icon" href="./Images/Favicon.png" type="image/png" />
 </head>
 
 <body>
@@ -28,12 +28,26 @@
       <a href="bosena.html"
         ><img
           src="/Images/Bosena/bench@1x.png"
-          srcset="Images/Bosena/bench@1x.png 1x, Images/Bosena/bench@3xresized.jpg 2x"
+          srcset="
+            Images/Bosena/bench@1x.png        1x,
+            Images/Bosena/bench@3xresized.jpg 2x
+          "
       /></a>
-      <a href="ERC-7578.html">
-        <video loading="lazy" playsinline muted autoplay loop poster="Images/Desat/Watch Poster.png">
-          <source src="/Videos/Desat/EX_ERC-7578_Watch.webm" />
-        </video>
+      <div class="vimeo-wrapper-link">
+        <div style="padding: 56.25% 0 0 0; position: relative">
+          <iframe
+            src="https://player.vimeo.com/video/1072333074?h=9b05f8579c&badge=0&autopause=0&player_id=0&app_id=584799&autoplay=1&loop=1&controls=0&muted=1"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;"
+            title="EX_ERC-7578_Watch Cover"
+          ></iframe>
+          <a href="ERC-7578.html" class="overlay-link" title="Go to project"></a>
+        </div>
+      </div>
+     
+          <script src="https://player.vimeo.com/api/player.js"></script>
+        </div>
       </a>
     </div>
   </div>

@@ -77,7 +77,8 @@ width: 100%;
 margin-bottom: 2rem;
 }
 
-.gallery video {
+.gallery video,
+.gallery iframe {
 border-radius: 0.75rem;
 width: 100%;
 margin-bottom: 2rem;
@@ -118,6 +119,17 @@ font-size: 1rem;
 font-weight: 300;
 letter-spacing: 0rem;
 }
+
+.overlay-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: block;
+}
+
 
 .button {
 display: flex;
@@ -284,6 +296,10 @@ nav {
       padding-bottom: 2px;
       border-bottom: #00f solid 2px;
     }
+
+    .vimeo-wrapper {
+      margin-bottom: 1.5rem;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -365,9 +381,14 @@ nav {
       margin-right: 0;
   
     }
+
+    .vimeo-wrapper {
+      margin-bottom: 2.5rem;
+    }
 }
 
 @media (min-width: 1660px) {
+  
   .desc {
     width: 58%;
     font-size: 1.25rem;
@@ -407,6 +428,7 @@ nav {
 }
 
 @media (min-width: 1280px) and (max-width: 1440px) {
+
   .desc {
     width: 66%;
   }
@@ -430,4 +452,105 @@ nav {
   .tap-for-audio {
     display: none;
   }
+}
+
+.vimeo-wrapper {
+  width: 100%;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.vimeo-wrapper--first {
+  padding-top: 56.25%;
+  position: relative;
+  width: 100%;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .vimeo-wrapper--first {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .vimeo-wrapper--first {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .vimeo-wrapper--first {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .vimeo-wrapper--first {
+    margin-bottom: 3rem;
+  }
+}
+
+.vimeo-wrapper--first iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+  .vimeo-wrapper {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .vimeo-wrapper {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .vimeo-wrapper {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .vimeo-wrapper {
+    margin-bottom: 3rem;
+  }
+}
+
+.vimeo-wrapper-link {
+  width: 100%;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.vimeo-wrapper-link iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+
+.vimeo-wrapper-link .overlay-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: block;
 }
