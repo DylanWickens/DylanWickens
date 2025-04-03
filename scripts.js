@@ -17,27 +17,28 @@ document.addEventListener("DOMContentLoaded", () => {
     videos.forEach((video) => observer.observe(video));
 
     const video = document.querySelector('.autoplay-video');
+    const overlay = document.querySelector('.tap-for-audio');
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-    if (isMobile) {
-      video.muted = true;
-    }
-
-    const overlay = document.querySelector('.tap-for-audio');
-
-    function enableAudio() {
-      if (video.muted) {
-        video.muted = false;
-        video.play();
+    if (video && overlay) {
+      if (isMobile) {
+        video.muted = true;
       }
-      overlay.style.opacity = '0';
-      setTimeout(() => overlay.style.display = 'none', 300);
+
+      function enableAudio() {
+        if (video.muted) {
+          video.muted = false;
+          video.play();
+        }
+        overlay.style.opacity = '0';
+        setTimeout(() => overlay.style.display = 'none', 300);
+      }
+
+      setTimeout(() => {
+        overlay.style.opacity = '0';
+        setTimeout(() => overlay.style.display = 'none', 300);
+      }, 1250);
+
+      video.addEventListener('click', enableAudio);
     }
-
-    setTimeout(() => {
-      overlay.style.opacity = '0';
-      setTimeout(() => overlay.style.display = 'none', 300);
-    }, 1250);
-
-    video.addEventListener('click', enableAudio);
   });
