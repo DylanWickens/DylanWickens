@@ -538,6 +538,11 @@ nav {
   overflow: hidden;
   margin-bottom: 2rem;
   position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.vimeo-wrapper-link:hover {
+  transform: scale(1.01);
 }
 
 .vimeo-wrapper-link iframe {
