@@ -1,0 +1,125 @@
+@font-face {
+  font-family: Metrify;
+  src: url(./fonts/NaNMetrifyB-VF.woff);
+}
+
+:root {
+  --white: #f1f1f1;
+  --black: #1a1a1a;
+  --blue: #0000ff;
+  --grey: #555;
+}
+
+body {
+  background-color: var(--white);
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  font-family: Metrify;
+
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+#ui {
+  background-color: var(--white);
+  height: 100vh;
+  padding: 15px;
+}
+
+.ui-component {
+  display: grid;
+  grid-template-columns: 120px 2fr;
+  padding-bottom: 10px;
+  align-items: center;
+}
+
+/* canvas {
+  /* width: 900px !important;
+  height: 900px !important; 
+} */
+
+#artboard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--black);
+}
+
+label {
+  width: 100%;
+}
+
+input {
+  width: 100%;
+}
+
+input[type="number"] {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+input[type="range"] {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+textarea[type="text"] {
+  resize: none;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+input[type="range"] {
+  border: none;
+  box-shadow: none;
+  outline: none;
+
+  -webkit-appearance: none;
+  appearance: none;
+  height: 3px;
+  background-color: #dadada;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 4px;
+  height: 13px;
+  background: #0000ff;
+}
+
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 4px;
+  height: 13px;
+  background: #0000ff;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 13px;
+  height: 13px;
+  margin: 0;
+  border: none;
+  background-color: #dadada;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #0000ff;
+}
+
+button {
+  border:none;
+  background-color: #0000ff;
+  padding:3px;
+  color:#f1f1f1;
+}

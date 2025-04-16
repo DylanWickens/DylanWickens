@@ -1,0 +1,112 @@
+<head>
+  
+  <link rel="stylesheet" href="./GradShowreset.css" />
+  <link rel="stylesheet" href="./GradShow.css" />
+</head>
+
+<body>
+  <div id="ui">
+    <div class="ui-component">
+      <label>Headline</label>
+      <textarea type="text" id="headline">Falmouth&#13;&#10;Gradshow</textarea>
+    </div>
+
+    <div class="ui-component">
+      <label>H1 Fontsize</label>
+      <input type="range" id="h1FontSize" value="90.3" min="2" max="500" />
+    </div>
+
+    <div class="ui-component">
+      <label>H1 Line Height</label>
+      <input
+        type="range"
+        id="h1LineHeight"
+        value="1"
+        min="0"
+        max="15"
+        step="0.1"
+      />
+    </div>
+
+    <div class="ui-component">
+      <label>H2 Fontsize</label>
+      <input type="range" id="h2FontSize" value="12.34" min="2" max="500" />
+    </div>
+
+    <div class="ui-component">
+      <label>H2 Line Height</label>
+      <input type="range" id="h2LineHeight" value="16" min="1" max="150" />
+    </div>
+
+    <div class="ui-component">
+      <label>Tiles X</label>
+      <input type="range" id="tilesX" value="5" min="1" max="50" />
+    </div>
+
+    <div class="ui-component">
+      <label>Tiles Y</label>
+      <input type="range" id="tilesY" value="5" min="1" max="50" />
+    </div>
+
+    <div class="ui-component">
+      <label>Use Sin Wave</label>
+      <input type="checkbox" id="useSin" />
+    </div>
+
+    <div class="ui-component">
+      <label>Amplitude</label>
+      <input type="range" id="waveAmplitude" value="10" min="1" max="100" step="1" />
+    </div>
+    
+    <div class="ui-component">
+      <label>Frequency</label>
+      <input type="range" id="waveFrequency" value="0.6" min="0.1" max="5" step="0.1" />
+    </div>
+
+    <!-- <div class="ui-component">
+      <label>Frequency</label>
+      <input type="number" id="canvasSize" value="900" min="0.1" max="5" step="0.1" />
+    </div> -->
+
+    <div class="ui-component">
+      <label>X Offset</label>
+      <input type="checkbox" id="applyXOffset" checked />
+    </div>
+
+    <div class="ui-component" style="margin-top: 25px;">
+      <button id="saveImg" onclick="saveImage()">Save an image</button>
+    </div>
+
+    <div class="ui-component">
+      <button id="saveVideo" onclick="startRecording()">Start Recording</button>
+
+      <button id="stopVideo" onclick="stopRecording()" style="margin-left: 15px;">Stop Recording</button>
+    </div>
+
+    <div class="ui-component">
+
+    </div>
+
+   
+  </div>
+  </div>
+ 
+
+ 
+
+  <div id="artboard">
+    <div id="canvasWrapper"></div>
+  </div>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js"
+    integrity="sha512-I0Pwwz3PPNQkWes+rcSoQqikKFfRmTfGQrcNzZbm8ALaUyJuFdyRinl805shE8xT6iEWsWgvRxdXb3yhQNXKoA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="./GradShowsketch.js"></script>
+  <script src="./record.js"></script>
+
+
+
+</body>
