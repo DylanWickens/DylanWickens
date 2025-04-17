@@ -205,6 +205,7 @@ nav h2 {
   }
 
   nav {
+    z-index: 100;
     display: block;
     position: relative;
     width: 100%;
