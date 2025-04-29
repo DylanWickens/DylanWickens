@@ -73,7 +73,11 @@ nav h2 {
 .gallery img {
   border-radius: 0.75rem;
   width: 100%;
+}
+
+.gallery a img{
   margin-bottom: 2rem;
+  height: min-content;
 }
 
 .gallery video,
