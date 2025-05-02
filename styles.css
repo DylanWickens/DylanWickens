@@ -75,9 +75,15 @@ nav h2 {
   width: 100%;
 }
 
+.gallery a {
+    display: inline-block;
+}
+
 .gallery a img{
-  margin-bottom: 2rem;
-  height: min-content;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
 }
 
 .gallery video,
